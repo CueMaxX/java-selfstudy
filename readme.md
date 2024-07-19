@@ -56,7 +56,7 @@ Good luck with your evaluation!
 Please answer the following questions to the best of your ability to show your understanding of the learning outcomes. Please provide examples from your project code to support your answers. Only links to your own git will count. When you explain what you did make sure to explain why you did it this way with clear reasoning relating to your own work and not generic statements that anyone could make.
 
 ## Important note from the student:
-In case I have time and knowledge in my head left, I, Ephraim, will add code outside of my repository. I am aware that I do not know whether that results in any point for the task, but maybe it does which is why - if there is sufficient time in the end - to insert more code. I oblige to always mention code that has been created during the exam.
+In case I have time and knowledge in my head left, I, Ephraim, will add code outside of my repository. I am aware that I do not know whether that results in any point for the task, but maybe it does which is why - if there is sufficient time in the end - to insert more code. I oblige to format code that has been created during the exam as markdown code.
 Also, I was told that the project is due *after* the exam, which is why I have not started with the project yet and I can therefore only refer to my practice code.
 
 ## Evaluation Material
@@ -71,7 +71,16 @@ Algorithms are manyfold and Java can be used to program these. Examples are sort
 and
 [algorithms.java:24](https://github.com/CueMaxX/java-selfstudy/blob/main/Advanced/algorithms.java)
 are places where I have used algorithms.
-
+<br> I have not written any algorithms in the code, but here would be an example:
+```java
+public static int linSearch(int[] input, int output) {
+  for (int i = 0; i < input.length; i++) {
+    if (input[i] == output) {
+      return i;
+    }
+  }
+  System.out.println("Not found!");
+```
 
 
 
@@ -112,7 +121,26 @@ Examples of complex data structures in Java are ArrayList, HashMap, HashSet, Lin
 
 ### Complex Data Structures - answer
 * When I was testing out different algorithms (see algorithms), I [used an arraylist](https://github.com/CueMaxX/java-selfstudy/blob/main/Advanced/algorithms.java) because the different algorithms need to search through my provided dataset, and arraylists provide a constant time for search operations.
-* In case I have time in the end, I will provide another example outside of my git repo.
+* Here I implement a linked list in Java:
+```java
+import java.util.LinkedList;
+
+public class EnlargeList {
+  public static void main(String[] args) {
+    LinkedList<String> shoppinglist = new LinkedList<String>();
+
+    shoppinglist.add("Apple");
+    shoppinglist.add("Banana");
+    shoppinglist.add("Fries");
+    shoppinglist.add("Sugar");
+    shoppinglist.add("Flowers");
+
+    // Print shopping List
+    System.out.println(shoppinglist);
+  }
+}
+```
+
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
@@ -182,7 +210,7 @@ Test cases usually cover the following areas:
 
 
 ### Testing - answer
-None so far.
+I have not used JUnit to test my project. However, I can use try-catch or try-with to catch exceptions or error cases, boundary case testing with simple if and else if conditions and normal cases through printing expected values to the serial command line.
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
@@ -249,7 +277,7 @@ list.forEach((String s) -> System.out.println(s));
 Please explain the concept of lambda expressions and provide an example of how you have used lambda expressions in your code. The link does not have to be to your project and can be to your practice code.
 
 ### Lambda Expressions - answer
-None so far.
+A Lambda expression is used in Java to express different instances to functional interfaces. They enable us to e.g. treat code as data.
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
@@ -263,7 +291,41 @@ Serialization is the process of converting an object into a stream of bytes to s
 
 
 ### Serialization - answer
-None so far.
+Why to use serialization has been described pretty well already in the task description. When e.g. passing over multiple datasets through a URL, which is just one large string, I would use serialization. Also, we could use serialization when we want to store objects into a text file:  
+```java
+import java.io.Serializable;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
+public class Person implements Serializable {
+  private String name;
+  private int age;
+  private String[] hobbies;
+
+  public Person(String name, int age, String[] hobbies) {
+    this.name = name;
+    this.age = age;
+    this.hobbies = hobbies;
+  }
+}
+
+public class SerializePerson {
+  public static void main(String[] args) {
+    Person p1 = new Person("Jonny Depp", 30, {"sailing", "murdering"});
+    try {
+      FileOutputStream fileOut = new FileOutputStream("depp.txt");
+      ObjectOutputStream out = new ObjectOutputStream(fileOut);
+      out.writeObject(p1);
+      out.close();
+      fileOut.close();
+      System.out.println("Data serialized!");
+    } catch (IOException i) {
+      i.printStackTrace();
+    }
+  }
+}
+```
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
