@@ -55,6 +55,10 @@ Good luck with your evaluation!
 
 Please answer the following questions to the best of your ability to show your understanding of the learning outcomes. Please provide examples from your project code to support your answers. Only links to your own git will count. When you explain what you did make sure to explain why you did it this way with clear reasoning relating to your own work and not generic statements that anyone could make.
 
+## Important note from the student:
+In case I have time and knowledge in my head left, I, Ephraim, will add code outside of my repository. I am aware that I do not know whether that results in any point for the task, but maybe it does which is why - if there is sufficient time in the end - to insert more code. I oblige to always mention code that has been created during the exam.
+Also, I was told that the project is due *after* the exam, which is why I have not started with the project yet and I can therefore only refer to my practice code.
+
 ## Evaluation Material
 
 
@@ -62,8 +66,13 @@ Please answer the following questions to the best of your ability to show your u
 
 Algorithms are manyfold and Java can be used to program these. Examples are sorting or search strategies but also mathematical calculations. Please refer to **two** areas in either your regular coding practice or within your project, where you have coded an algorithm. Do not make reference to code written for other classes, like theoretical informatics.
 
+### Algorithms - answer
+[algorithms.java:17](https://github.com/CueMaxX/java-selfstudy/blob/main/Advanced/algorithms.java)
+and
+[algorithms.java:24](https://github.com/CueMaxX/java-selfstudy/blob/main/Advanced/algorithms.java)
+are places where I have used algorithms.
 
-*your text*
+
 
 
 | Total Achievable Points | Points Reached During Grading |
@@ -81,8 +90,13 @@ Typical data types in java are int, double, float, char, boolean, long, short, b
 * boolean
 
 Regarding the link to your project, explain the context in which you have used this data type being specific to your project.
-
-*your text*
+### Data types - answer
+Different data types can be used in most of todays programming languages, including Java, to  - of course - differentiate between different types of data that needs to be stored in memory. This is because
+* memory conservation: Not every data type needs a lot of memory so it will save on memory
+* expected data: We can specify which data we expect and if other data is stored in a variable with another data type, we will get a useful error
+* I have used [strings](https://github.com/CueMaxX/java-selfstudy/blob/main/Advanced/strings.java) to store text,
+* [arrays](https://github.com/CueMaxX/java-selfstudy/blob/main/Basics/arrays.java) and [multidimensional arrays](https://github.com/CueMaxX/java-selfstudy/blob/main/Basics/dimarrays.java) to store multiple related data sets of the same data type,
+* and [boolean](https://github.com/CueMaxX/java-selfstudy/blob/main/Basics/Types.java) to store e.g. states in "true" or "false"
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
@@ -96,7 +110,9 @@ Regarding the link to your project, explain the context in which you have used t
 
 Examples of complex data structures in Java are ArrayList, HashMap, HashSet, LinkedList, and TreeMap. Please provide an example of how you have used **two** of these complex data structures in your code and explain why you have chosen these data structures. Examples do not have to come from the project.
 
-*your text*
+### Complex Data Structures - answer
+* When I was testing out different algorithms (see algorithms), I [used an arraylist](https://github.com/CueMaxX/java-selfstudy/blob/main/Advanced/algorithms.java) because the different algorithms need to search through my provided dataset, and arraylists provide a constant time for search operations.
+* In case I have time in the end, I will provide another example outside of my git repo.
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
