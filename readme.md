@@ -129,7 +129,11 @@ Explain HOW and WHY your **project** demonstrates the use of OOP by using all of
 * Attributes
   Link to the code in your project that demonstrates what you have explained above.
 
-*your text*
+### Concepts of OOP - answer
+Since I did not start with the project (see note above), I will link to my practice codebase.
+* I [have used](https://github.com/CueMaxX/java-selfstudy/blob/main/Advanced/parameters.java) classes/objects
+* [Here](https://github.com/CueMaxX/java-selfstudy/blob/main/Advanced/getters.java) is where I wrote different methods for a class
+* Also, I made use of [constructors](https://github.com/CueMaxX/java-selfstudy/blob/main/Advanced/constructors.java) to initiate objects with different attributes
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
@@ -143,7 +147,10 @@ Explain HOW and WHY your **project** demonstrates the use of OOP by using all of
 Please showcase **two** areas **where** you have used object orientation in your project. (How and why you use it will be the next question below.)
 Examples in Java of good oo design are composition, encapsulation, inheritance, polymorphism, and abstraction.
 
-*your text*
+### OO Design - answer
+Again, I will link to my practice code:
+* [Inheritance](https://github.com/CueMaxX/java-selfstudy/blob/main/Advanced/inheritance.java)
+* [Polymorphism](https://github.com/CueMaxX/java-selfstudy/blob/main/Expert/polymorph.java)
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
@@ -155,7 +162,10 @@ Examples in Java of good oo design are composition, encapsulation, inheritance, 
 ### Advanced Class Concepts
 Advanced class concepts include constructors, abstract classes, interfaces, access modifiers, static methods, and variables. Please provide an example of how you have used **two** of these class concepts in your **project** code and explain why you have chosen these class concepts and how they work within your code.
 
-*your text*
+### Advanced Class Concepts - answer
+Again, practice code.
+* [Constructors](https://github.com/CueMaxX/java-selfstudy/blob/main/Advanced/constructors.java) can be used to initiate an object in different ways depending on the given parameters during instantiation. In the provided code, this allows you to e.g. instantiate the Object "Machine" with no parameters at all, resulting in String name to be set to "default machine". However, when you hand over a string, that will be used as a name instead. When providing both a string and an integer, the string is still used for the name, and the integer is used for the machine's id.
+* [Interfaces](https://github.com/CueMaxX/java-selfstudy/blob/main/Expert/interfaces.java) allow you to provide a general method that can be used by multiple different object types. In the linked example, I have created the interface "Info" with the method "showInfo()". Then, I was able to add "class xxx implements Info" and add the method "showInfo()" to the class itself which can then execute object specific code. This way, I can program machine1.showInfo() to print the id of a machine (which is an integer) and at the same time use person1.showInfo() to print out the persons name, which is a string.
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
@@ -171,7 +181,8 @@ Test cases usually cover the following areas:
 * error cases / catching exceptions
 
 
-*your text*
+### Testing - answer
+None so far.
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
@@ -182,7 +193,9 @@ Test cases usually cover the following areas:
 An example of operator overloading is the "+" operator that can be used to add two numbers or concatenate two strings. An example of method overloading is having two methods with the same name but different parameters. Please provide an example of how you have used operator or method overloading in your code and explain why you have chosen this method of coding.
 The link does not have to be to your project and can be to your practice code.
 
-*your text*
+### Operator/Method Overloading - answer
+I have used method overloading [here](https://github.com/CueMaxX/java-selfstudy/blob/main/Advanced/constructors.java) through the use of constructors, which can be used to initiate an object in different ways depending on the given parameters during instantiation. In the provided code, this allows you to e.g. instantiate the Object "Machine" with no parameters at all, resulting in String name to be set to "default machine". However, when you hand over a string, that will be used as a name instead. When providing both a string and an integer, the string is still used for the name, and the integer is used for the machine's id.
+
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
@@ -194,7 +207,8 @@ The link does not have to be to your project and can be to your practice code.
 ### Generics
 Generics in java are used to create classes, interfaces, and methods that operate on objects of specified types. Please provide an example of how you have used generics in your code and explain why you have chosen to use generics. The link does not have to be to your project and can be to your practice code.
 
-*your text*
+### Generics - answer
+None so far.
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
@@ -204,7 +218,8 @@ Generics in java are used to create classes, interfaces, and methods that operat
 ### Class Libraries
 Examples of class libraries in java are the Java Standard Library, JavaFX, Apache Commons, JUnit, Log4j, Jackson, Guava, Joda-Time, Hibernate, Spring, Maven, and many more. Please provide an example of how you have used a class library in your **project** code and explain why you have chosen to use this class library.
 
-*your text*
+### Class Libraries - answer
+None so far.
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
@@ -215,7 +230,10 @@ Examples of class libraries in java are the Java Standard Library, JavaFX, Apach
 multi-threading is the ability of a CPU to execute multiple processes or threads concurrently. Please explain the concept of multi-threading and provide an example of how you have used multi-threading in your code. The link does not have to be to your project and can be to your practice code.
 
 
-*your text*
+### Multi-threading - answer
+Multi-threading is an interesting concept where we have a parrallel way of code execution. When an operating system / kernel uses multithreading, it can assign a running process to a specific thread, allowing other processes to be executed in another thread. If the hosts CPU supports hardware multithreading (which most of them since, idk, maybe 2004, do...?) and the OS / kernel supports multithreading as well (support was even earlier I think), there is real parrallel code execution. That means that multiple processes can calculate stuff truly at the same time and not after each other (when using single-threading systems, e.g. an arduino maybe?).
+<br> However, entire programs within the OS / kernel can also make use of multithreading. In this case, this must be specifically programmed -> when one tasks needs to wait for the input of another task anyways, it does not make sense to implement multithreading there. However, in resource-hungry applications like AAA-Games, video editing or AI training, it is highly useful to split up multiple tasks to different threads (and therefore even multiple cores on a CPU/GPU). 
+<br> I have [fiddled](https://github.com/CueMaxX/java-selfstudy/blob/main/Expert/multithreading.java) a bit with multithreading in my practice code.
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
@@ -230,7 +248,8 @@ list.forEach((String s) -> System.out.println(s));
 ```
 Please explain the concept of lambda expressions and provide an example of how you have used lambda expressions in your code. The link does not have to be to your project and can be to your practice code.
 
-*your text*
+### Lambda Expressions - answer
+None so far.
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
@@ -243,7 +262,8 @@ Please explain the concept of lambda expressions and provide an example of how y
 Serialization is the process of converting an object into a stream of bytes to store the object or transmit it to memory, a database, or a file. Please explain why you would use serialization and provide an example of how you have used serialization in your code. The link does not have to be to your project and can be to your practice code.
 
 
-*your text*
+### Serialization - answer
+None so far.
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
@@ -255,7 +275,8 @@ Serialization is the process of converting an object into a stream of bytes to s
 Web applications use databases to store data. Please explain how you have connected to a database in your project and provide an example of how you have used database connectivity in your code. The link does not have to be to your project and can be to your practice code. Do not use code from other classes, like database programming, Web Engineering, or theoretical informatics.
 This topic appeared in your learning agreement as the last point in the table under advanced topics.
 
-*your text*
+### Database Connectivity - answer
+None so far.
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
